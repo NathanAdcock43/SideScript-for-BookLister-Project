@@ -249,12 +249,13 @@ body{
 
 .card-flip .front {
     position: relative;
-    z-index: 1;
+    z-index: 3;
 }
 
 .card-flip .back {
     position: relative;
-    z-index: 0;
+    top: -300px;
+    z-index: 2;
     transform: rotateY(-180deg);
 }
 
