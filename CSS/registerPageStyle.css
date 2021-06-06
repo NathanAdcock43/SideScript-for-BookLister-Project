@@ -121,12 +121,12 @@ body{
 }
 .register-left .book{
     position: absolute;
-    top: -65px;
-    left: 55px;
+    top: -60px;
+    left: 50px;
     z-index: 10;
     margin-top: 15%;
     margin-bottom: 5%;
-    width: 50%;
+    width: 45%;
     /*-webkit-animation: mover 1s;*/
     animation: mover 5s forwards ;
     animation-timing-function: ease-in-out;
@@ -139,8 +139,8 @@ body{
 }
 
 @keyframes mover {
-    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); opacity:0.0; }
-    40% { transform: rotate(0deg) translateX(100px) rotate(0deg); opacity:8.0; }
+    0% { transform: rotate(0deg) translateX(75px) rotate(0deg); opacity:0.0; }
+    40% { transform: rotate(0deg) translateX(75px) rotate(0deg); opacity:8.0; }
     93%{ transform: rotate(-180deg) translateY(-50px) rotate(-180deg); opacity:9.0}
     /*90%{ transform: rotate(-180deg) translateY(-100px) rotate(-180deg); opacity:1.0}*/
     94%{ transform: translateY(50px); opacity:1.0 }
@@ -148,9 +148,9 @@ body{
     100%{ transform: translateY(50px); opacity:1.0 }
 }
 @-webkit-keyframes mover {
-    0% { -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);opacity:0.0; }
-    40% { -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);opacity:8.0; }
-    90%{ -webkit-transform: rotate(-180deg) translateX(50px) rotate(-180deg); opacity:9.0}
+    0% { -webkit-transform: rotate(0deg) translateX(35px) rotate(0deg);opacity:0.0; }
+    40% { -webkit-transform: rotate(0deg) translateX(35px) rotate(0deg);opacity:8.0; }
+    90%{ -webkit-transform: rotate(-180deg) translateX(35px) rotate(-180deg); opacity:9.0}
     94%{ transform: rotate(-180deg) translateY(-100px) rotate(-180deg); opacity:1.0}
     94%{ transform: translateY(50px); opacity:1.0}
     96%{ transform: translateY(47px); opacity:1.0}

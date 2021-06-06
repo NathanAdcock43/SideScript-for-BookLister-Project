@@ -2,17 +2,10 @@ body{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
 }
 
-
-.register{
-    width: 100%;
-    /*margin-top: 3%;*/
-    /*padding: 3%;*/
-}
-
-.title{
+.navtitle{
     font-family: 'Volkhov', serif;
     letter-spacing: 2px;
-    font-size: 4em;
+    font-size: 50px;
     text-align: center;
     margin-bottom: 0 !important;
 }
@@ -54,6 +47,13 @@ body{
     width: 700px;
     border-top-left-radius: 5% 30%;
     border-bottom-left-radius: 5% 30%;
+}
+
+.infoBanner{
+    margin: 30px;
+    background: #D0E4F5 url("/media/AdBanner-01.png") no-repeat scroll 50% 50%;
+    height: 400px;
+    width: 100%;
 }
 
 .bookcover {
@@ -114,48 +114,97 @@ body{
 
 .register-left .stack{
     position: relative;
-    top: 0;
-    left: 0;
+    top: -270px;
+    left: 100px;
     margin-top: 15%;
     margin-bottom: 5%;
-    width: 50%;
+    width: 200%;
 }
 .register-left .book{
     position: absolute;
-    top: -65px;
-    left: 55px;
+    top: -500px;
+    left: 100px;
     z-index: 10;
     margin-top: 15%;
     margin-bottom: 5%;
-    width: 50%;
-    /*-webkit-animation: mover 1s;*/
+    width: 175%;
     animation: mover 5s forwards ;
     animation-timing-function: ease-in-out;
-    /*animation-delay: .5s;*/
     animation-iteration-count: 1;
-    /*animation-direction: alternate;*/
-    /*animation-fill-mode: none;*/
-    /*animation-play-state: running;*/
     animation-name: mover;
 }
 
 @keyframes mover {
-    0% { transform: rotate(0deg) translateX(100px) rotate(0deg); opacity:0.0; }
-    40% { transform: rotate(0deg) translateX(100px) rotate(0deg); opacity:8.0; }
-    93%{ transform: rotate(-180deg) translateY(-50px) rotate(-180deg); opacity:9.0}
+    0% { transform: rotate(0deg) translateX(75px) rotate(0deg); opacity:0.0; }
+    40% { transform: rotate(0deg) translateX(75px) rotate(0deg); opacity:8.0; }
+    93%{ transform: rotate(-180deg) translateY(-200px) rotate(-180deg); opacity:9.0}
     /*90%{ transform: rotate(-180deg) translateY(-100px) rotate(-180deg); opacity:1.0}*/
-    94%{ transform: translateY(50px); opacity:1.0 }
-    96%{ transform: translateY(47px); opacity:1.0 }
-    100%{ transform: translateY(50px); opacity:1.0 }
+    94%{ transform: translateY(210px); opacity:1.0 }
+    96%{ transform: translateY(205px); opacity:1.0 }
+    100%{ transform: translateY(210px); opacity:1.0 }
 }
 @-webkit-keyframes mover {
     0% { -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);opacity:0.0; }
     40% { -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);opacity:8.0; }
-    90%{ -webkit-transform: rotate(-180deg) translateX(50px) rotate(-180deg); opacity:9.0}
-    94%{ transform: rotate(-180deg) translateY(-100px) rotate(-180deg); opacity:1.0}
-    94%{ transform: translateY(50px); opacity:1.0}
-    96%{ transform: translateY(47px); opacity:1.0}
-    100%{ transform: translateY(50px); opacity:1.0}
+    94%{ -webkit-transform: rotate(-180deg) translateX(50px) rotate(-180deg); opacity:9.0}
+    94%{ transform: translateY(210px); opacity:1.0}
+    96%{ transform: translateY(205px); opacity:1.0}
+    100%{ transform: translateY(210px); opacity:1.0}
+}
+
+.revealedLinks{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-align: left;
+    padding-left: 60px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    top: 100px;
+    /*animation-delay: 2s;*/
+    animation: mover 4s forwards ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: reveal;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes reveal {
+    0%{ transform: translateY(0px); opacity:0.0 }
+    50%{ transform: translateY(-200px); opacity:0.0 }
+    100%{ transform: translateY(0px); opacity:1.0 }
+}
+
+#bookmark {
+    top: -100px;
+    width: 120px;
+    height: 480px;
+    position: relative;
+    background: red;
+    animation: mover 4s forwards ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: bookmarkDrop;
+}
+#bookmark:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-bottom: 120px solid #353db0;
+    border-left: 155px solid transparent;
+    border-right: 155px solid transparent;
+}
+
+@keyframes bookmarkDrop {
+    0%{ transform: translateY(0px); opacity:0.0 }
+    50%{ transform: translateY(-200px); opacity:0.0 }
+    100%{ transform: translateY(0px); opacity:1.0 }
 }
 
 .register-left p{
@@ -211,6 +260,9 @@ body{
     color: #495057;
 }
 
+
+
+/* Card Flipping CSS */
 .card-block .btn-outline-primary {
     width: 100%;
     border-top-left-radius: 0;
@@ -224,7 +276,6 @@ body{
     margin: 40px;
 }
 
-/* Flip Cards CSS */
 .card-container {
     perspective: 700px;
 }
@@ -261,6 +312,69 @@ body{
 
 .card-container:hover .card-flip {
     transform: rotateY(180deg);
+}
+
+
+/*Nav bar stuff*/
+
+.navigationWrapper {
+    position: relative;
+    margin-left:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px 30px 100px !important;
+    background-color: #fff;
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    color: #000000;
+    /*text-transform: uppercase;*/
+    overflow: hidden;
+    width: 85%;
+    height: 250px;
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    opacity: 1;
+    list-style-type: none;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.clickable {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 40px;
+    color: #000000;
+    font-weight: bolder;
+}
+
+:hover {
+     color: #000000;
+}
+
+li a {
+    font-size: 30px;
+    padding: 0 5px;
 }
 
 
