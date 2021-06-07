@@ -40,32 +40,60 @@ body{
 }
 /*text area*/
 .blank-book{
-    position: relative;
+    position: absolute;
     width: 80%;
     margin-top: 5%;
     margin-left: auto;
     margin-right: auto;
     z-index: -5;
+    left:9%;
 }
 .book-text{
+    position: relative;
+    z-index: 15;
 /*background: url("/media/blank-book.png") no-repeat 50% 50%;*/
 
 }
 
 .book-text-left{
+    text-align: left;
     width: 80%;
-    margin-top: 10%;
-    margin-left: auto;
-    /*margin-right: auto;*/
+    margin: 7% 8% 0 1% !important;
+    /*padding-left: 8% !important;*/
+    /*padding-right: 1% !important;*/
+    border-bottom: black solid thick;
 }
 
 .book-text-right{
+    text-align: right;
     width: 80%;
-    margin-top: 10%;
-    margin-left: auto;
-    /*margin-right: auto;*/
+    padding-top: 7% !important;
+    padding-right: 10% !important;
+    padding-left: 2% !important;
 }
 
+.inner-page-row{
+    flex-wrap: nowrap !important;
+}
+
+.inner-page-col-l{
+    padding: 40px 0 5px 25px !important;
+}
+
+.inner-page-col-r{
+    padding: 5px 5px 5px 30px !important;
+    line-height: 90%;
+    border-left: black solid thick;
+}
+
+/*font Awesome styling*/
+.fas{
+    font-size: 7em;
+}
+
+.fa{
+    font-size: 10em;
+}
 
 .form-container {
     margin-top: 150px;
