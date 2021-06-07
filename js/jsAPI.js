@@ -1,7 +1,6 @@
 $(document).ready(function (){
 
 
-
     $("#myform").submit(function(){
         let search = $("#books").val();
         if (search === ''){
@@ -13,7 +12,7 @@ $(document).ready(function (){
             var author='';
             var descript='';
 
-            $.get("http://www.googleapis.com/books/v1/volumes?q=" + search, function (response) {
+            $.get(`https://www.googleapis.com/books/v1/volumes?q=search-terms&key= `+ search +`${APIv3Key}` , function(response){
 
                 for (i = 0; i < response.items.length; i++) {
                     //     get book title
@@ -29,6 +28,7 @@ $(document).ready(function (){
                     author.appendTo("#result");
                     descript.appendTo("#result");
                     img.appendTo("#result");
+                    console.log(response);
                 }
             });
         }
