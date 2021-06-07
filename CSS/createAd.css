@@ -61,8 +61,31 @@ body{
     width: 100%;
 }
 
+.display-title {
+
+}
+
 .bannerTextBlock{
-    margin-top: 100px;
+    padding: 105px 100px 0 0;
+    /*border-radius: 0 30%;*/
+}
+
+.form-field {
+    width: 85% !important;
+    border-radius: 0 20% !important;
+    border: 6px inset #7A7072 !important;
+    font-weight: bolder !important;
+    font-size: 15px !important;
+
+}
+
+.dropdown {
+    width: 100% !important;
+    height: 40px !important;
+    border-radius: 0 20%;
+    border: 6px inset #7A7072;
+    font-weight: bolder;
+    font-size: 15px;
 }
 
 .bannerTitle{
@@ -84,8 +107,9 @@ body{
     margin: 1.5em 5em 0 0 !important;
 }
 
-.bannerParagraph{
-
+.price{
+    text-align: center;
+    border-radius: 0 20%;
 }
 
 .bookcover {
