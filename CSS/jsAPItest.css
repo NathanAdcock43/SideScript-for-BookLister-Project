@@ -1,0 +1,26 @@
+
+
+
+
+
+
+
+
+
+button{
+    position: relative;
+    left: 50px;
+}
+.aligning{
+    margin-left: 700px;
+    margin-top: 20px;
+}
+#imagebutton{
+    position: relative;
+    left: -10px;
+    top: -8px;
+    margin-bottom:15px;
+}
+#result{
+
+}

@@ -50,10 +50,37 @@ body{
 }
 
 .infoBanner{
-    margin: 30px;
-    background: #D0E4F5 url("/media/AdBanner-01.png") no-repeat scroll 50% 50%;
-    height: 400px;
+    position: relative;
+    top:-250px;
+    margin-top: 30px;
+    margin-left: 50px !important;
+    background: url("../media/AdBanner-01.png") no-repeat scroll 50% 50% ;
+    background-size: 100%;
+    height: 600px;
     width: 100%;
+}
+
+.bannerTextBlock{
+    margin-top: 100px;
+}
+
+.bannerTitle{
+    text-shadow: -8px -5px #6B6F76;
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-size: 5em;
+}
+
+.bannerSubTitle{
+    text-shadow: -8px -5px #6B6F76;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 3em;
+
+}
+
+.bannerParagraph{
+
 }
 
 .bookcover {
@@ -368,14 +395,55 @@ li {
     font-weight: bolder;
 }
 
-:hover {
-     color: #000000;
-}
 
 li a {
     font-size: 30px;
     padding: 0 5px;
 }
 
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+}
 
+/* Taller footer on small screens */
+@media (max-width: 567em) {
+    body {
+        margin-bottom: 400px;
+    }
+    .footer {
+        height: 400px;
+    }
+}
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+footer {
+    padding-top: 60px;
+    background-color: #292c2f;
+    color: #bbb;
+}
+
+footer a {
+    color: #999;
+    text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+    color: #aaa;
+    text-decoration:none;
+    border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
+}
 
