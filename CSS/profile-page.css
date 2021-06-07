@@ -1,0 +1,250 @@
+body{
+    background: -webkit-linear-gradient(left, #3931af, #00c6ff);
+}
+
+
+.register{
+    width: 100%;
+    margin-top: 3%;
+    padding: 3%;
+}
+
+.title{
+    font-family: 'Volkhov', serif;
+    letter-spacing: 2px;
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+
+.navtitle{
+    font-family: 'Volkhov', serif;
+    letter-spacing: 2px;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+
+.subTitle{
+    text-align: center;
+}
+/*logo*/
+.openbook{
+    z-index: 10;
+    display: flex;
+    margin-top: 15px;
+    justify-content: center;
+    width: 300px;
+    align-self: center;
+    top:50px;
+}
+/*text area*/
+.blank-book{
+    position: relative;
+    width: 80%;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -5;
+}
+.book-text{
+/*background: url("/media/blank-book.png") no-repeat 50% 50%;*/
+
+}
+
+.book-text-left{
+    width: 80%;
+    margin-top: 10%;
+    margin-left: auto;
+    /*margin-right: auto;*/
+}
+
+.book-text-right{
+    width: 80%;
+    margin-top: 10%;
+    margin-left: auto;
+    /*margin-right: auto;*/
+}
+
+
+.form-container {
+    margin-top: 150px;
+
+}
+.register-left{
+    text-align: center;
+    color: #fff;
+    margin-top: 4%;
+}
+
+.register-right{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    border-top-left-radius: 5% 30%;
+    border-bottom-left-radius: 5% 30%;
+}
+
+
+.register-left .stack{
+    position: relative;
+    top: -20px;
+    left: 100px;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 200%;
+}
+.register-left .book{
+    position: absolute;
+    top: -250px;
+    left: 100px;
+    z-index: 10;
+    margin-top: 15%;
+    margin-bottom: 5%;
+    width: 175%;
+    animation: mover 5s forwards ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: mover;
+}
+
+@keyframes mover {
+    0% { transform: rotate(0deg) translateX(75px) rotate(0deg); opacity:0.0; }
+    40% { transform: rotate(0deg) translateX(75px) rotate(0deg); opacity:8.0; }
+    93%{ transform: rotate(-180deg) translateY(-200px) rotate(-180deg); opacity:9.0}
+    /*90%{ transform: rotate(-180deg) translateY(-100px) rotate(-180deg); opacity:1.0}*/
+    94%{ transform: translateY(210px); opacity:1.0 }
+    96%{ transform: translateY(205px); opacity:1.0 }
+    100%{ transform: translateY(210px); opacity:1.0 }
+}
+@-webkit-keyframes mover {
+    0% { -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);opacity:0.0; }
+    40% { -webkit-transform: rotate(0deg) translateX(50px) rotate(0deg);opacity:8.0; }
+    94%{ -webkit-transform: rotate(-180deg) translateX(50px) rotate(-180deg); opacity:9.0}
+    94%{ transform: translateY(210px); opacity:1.0}
+    96%{ transform: translateY(205px); opacity:1.0}
+    100%{ transform: translateY(210px); opacity:1.0}
+}
+
+.revealedLinks{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-align: left;
+    padding-left: 60px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    top: 25px;
+    right: 150px;
+    z-index: 15;
+    animation: mover 4s forwards ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: reveal;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes reveal {
+    0%{ transform: translateY(0px); opacity:0.0 }
+    50%{ transform: translateY(-200px); opacity:0.0 }
+    100%{ transform: translateY(0px); opacity:1.0 }
+}
+
+
+#bookmark {
+    /*width: px;*/
+    display: block;
+    height: 380px;
+    background-color: transparent;
+    position: absolute;
+    top: -100px;
+    /*right: 200px;*/
+    border: solid 150px  #B13A22;
+    border-bottom: solid 50px transparent;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: all 0.2s;
+    animation: mover 4s forwards ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: bookmarkDrop;
+}
+#bookmark:after {
+    content: "";
+    position: relative;
+    right: 65px;
+    top: -50px;
+    /*    height: 200px;*/
+    border: 90px solid #b13a22;
+    /*    border-bottom: solid 120px transparent;*/
+    /*    border-top-left-radius: 75px;*/
+    /*    border-top-right-radius: 75px;*/
+    width: 100px;
+    height: 120px;
+
+}
+
+@keyframes bookmarkDrop {
+    0%{ transform: translateY(0px); opacity:0.0 }
+    50%{ transform: translateY(-200px); opacity:0.0 }
+    100%{ transform: translateY(0px); opacity:1.0 }
+}
+
+
+
+/*Nav bar stuff*/
+
+.navigationWrapper {
+    position: relative;
+    margin-left:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px 30px 100px !important;
+    background-color: #fff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.50);
+    color: #000000;
+    overflow: hidden;
+    width: 85%;
+    height: 250px;
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    opacity: 1;
+    list-style-type: none;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.clickable {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 40px;
+    color: #000000;
+    font-weight: bolder;
+}
+
+

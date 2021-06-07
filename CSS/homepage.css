@@ -55,6 +55,7 @@ body{
     margin-top: 30px;
     margin-left: 50px !important;
     background: url("../media/AdBanner-01.png") no-repeat scroll 50% 50% ;
+    box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.50);
     background-size: 100%;
     height: 600px;
     width: 100%;
@@ -190,7 +191,7 @@ body{
     font-weight: bolder;
     color: #FFFFFF;
     top: 25px;
-    right: 200px;
+    right: 150px;
     z-index: 15;
     animation: mover 4s forwards ;
     animation-timing-function: ease-in-out;
@@ -227,7 +228,7 @@ body{
 #bookmark:after {
     content: "";
     position: relative;
-    right: 120px;
+    right: 65px;
     top: -50px;
 /*    height: 200px;*/
     border: 90px solid #b13a22;
@@ -236,6 +237,7 @@ body{
 /*    border-top-right-radius: 75px;*/
 width: 100px;
 height: 120px;
+
 }
 
 @keyframes bookmarkDrop {
@@ -362,9 +364,8 @@ height: 120px;
     justify-content: space-between;
     padding: 10px 50px 30px 100px !important;
     background-color: #fff;
-    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.50);
     color: #000000;
-    /*text-transform: uppercase;*/
     overflow: hidden;
     width: 85%;
     height: 250px;

@@ -17,6 +17,14 @@ body{
     margin-bottom: 0 !important;
 }
 
+.navtitle{
+    font-family: 'Volkhov', serif;
+    letter-spacing: 2px;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 0 !important;
+}
+
 .subTitle{
     text-align: center;
 }
@@ -29,6 +37,11 @@ body{
     width: 300px;
     align-self: center;
     top:50px;
+}
+
+.form-container {
+    margin-top: 150px;
+
 }
 
 .register-left{
@@ -157,6 +170,73 @@ body{
     100%{ transform: translateY(50px); opacity:1.0}
 }
 
+.revealedLinks{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    letter-spacing: 2px;
+    font-size: 40px;
+    text-align: left;
+    padding-left: 60px;
+    font-weight: bolder;
+    color: #FFFFFF;
+    top: 25px;
+    right: 150px;
+    z-index: 15;
+    animation: mover 4s forwards ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: reveal;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+@keyframes reveal {
+    0%{ transform: translateY(0px); opacity:0.0 }
+    50%{ transform: translateY(-200px); opacity:0.0 }
+    100%{ transform: translateY(0px); opacity:1.0 }
+}
+
+
+#bookmark {
+    /*width: px;*/
+    display: block;
+    height: 380px;
+    background-color: transparent;
+    position: absolute;
+    top: -100px;
+    /*right: 200px;*/
+    border: solid 150px  #B13A22;
+    border-bottom: solid 50px transparent;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: all 0.2s;
+    animation: mover 4s forwards ;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-name: bookmarkDrop;
+}
+#bookmark:after {
+    content: "";
+    position: relative;
+    right: 65px;
+    top: -50px;
+    /*    height: 200px;*/
+    border: 90px solid #b13a22;
+    /*    border-bottom: solid 120px transparent;*/
+    /*    border-top-left-radius: 75px;*/
+    /*    border-top-right-radius: 75px;*/
+    width: 100px;
+    height: 120px;
+
+}
+
+@keyframes bookmarkDrop {
+    0%{ transform: translateY(0px); opacity:0.0 }
+    50%{ transform: translateY(-200px); opacity:0.0 }
+    100%{ transform: translateY(0px); opacity:1.0 }
+}
+
 .register-left p{
     font-weight: lighter;
     padding: 12%;
@@ -259,6 +339,110 @@ body{
 
 .card-container:hover .card-flip {
     transform: rotateY(180deg);
+}
+
+/*Nav bar stuff*/
+
+.navigationWrapper {
+    position: relative;
+    margin-left:auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px 30px 100px !important;
+    background-color: #fff;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.50);
+    color: #000000;
+    overflow: hidden;
+    width: 85%;
+    height: 250px;
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.navigation {
+    display: flex;
+    list-style-type: none;
+}
+
+li {
+    opacity: 1;
+    list-style-type: none;
+    color: #000000;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.clickable {
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 40px;
+    color: #000000;
+    font-weight: bolder;
+}
+
+
+li a {
+    font-size: 30px;
+    padding: 0 5px;
+}
+
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 400px;
+}
+
+/* Taller footer on small screens */
+@media (max-width: 567em) {
+    body {
+        margin-bottom: 400px;
+    }
+    .footer {
+        height: 400px;
+    }
+}
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+footer {
+    padding-top: 60px;
+    background-color: #292c2f;
+    color: #bbb;
+}
+
+footer a {
+    color: #999;
+    text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+    color: #aaa;
+    text-decoration:none;
+    border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #1f2022;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+    border: none;
+    resize: none;
+    color: #d1d2d2;
+    padding: 0.7em 1em;
 }
 
 
