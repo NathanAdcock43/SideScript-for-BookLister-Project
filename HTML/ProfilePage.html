@@ -49,27 +49,46 @@
                 <div class="col-md-6">
                     <div class="row inner-page-row">
                         <div class="col-m-6 inner-page-col-l">
-                            <i class="fas fa-book-reader"></i>
+                            <i class="fas fa-book-reader userLogo"></i>
                         </div>
                         <div class="col-m-5 inner-page-col-r">
-                            <p>User Name:</p>
-                            <p>Current Password:</p>
-                            <p>Email:</p>
-                            <p>Genre Preference:</p>
+                            <p class="userInfo-descript">User Name:</p>
+                            <input class="userInfofield" type="text" name="username" disabled>
+                            <p class="userInfo-descript">Current Password:</p>
+                            <input class="userInfofield" type="text" name="password" disabled>
+                            <p class="userInfo-descript">Email:</p>
+                            <input class="userInfofield" type="text" name="email" disabled>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6">
-
+                    <ul class="nav social-media">
+                        <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook"></i></a></li>
+                        <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
+                        <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
+                        <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
+                    </ul>
                 </div>
             </div>
             <div class="col-md-5 book-text-right">
-                <ul class="nav ">
-                    <li class="nav-item"><a href="" class="nav-link pl-0"><i class="fa fa-facebook"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-twitter fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-github fa-lg"></i></a></li>
-                    <li class="nav-item"><a href="" class="nav-link"><i class="fa fa-instagram fa-lg"></i></a></li>
-                </ul>
+                <div class="col">
+                <p class="userInfo-descript">User Name:</p>
+                <input class="adfield" type="text" name="ad1" disabled>
+                <input class="adfield" type="text" name="ad2" disabled>
+                <input class="adfield" type="text" name="ad3" disabled>
+                <input class="adfield" type="text" name="ad4" disabled>
+                <input class="adfield" type="text" name="ad5" disabled>
+                <input class="adfield" type="text" name="ad6" disabled>
+                </div>
+                <div class="col">
+                    <select class="form-select form-select-lg dropdown" aria-label="Condition"
+                            data-style="btn-primary">
+                        <option selected>What condition is the book in?</option>
+                        <option value="1">New</option>
+                        <option value="2">Lightly used</option>
+                        <option value="3">Well worn</option>
+                    </select>
+                </div>
             </div>
             <div class="col-md-1"></div>
         </div>

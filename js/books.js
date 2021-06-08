@@ -39,6 +39,10 @@ $(document).ready(function() {
         let description = $('h4.select').clone().html();
         info.setAttribute("value", description)
     });
+
+    $(document).on("click", "h4.select" , function() {
+
+    }
     // $(document).on("click", "h3.select" , function() {
     //     var author = $('h3.select').clone().html();
     //

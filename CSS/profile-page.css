@@ -49,19 +49,18 @@ body{
     left:9%;
 }
 .book-text{
+    margin-top: 7%;
     position: relative;
     z-index: 15;
-/*background: url("/media/blank-book.png") no-repeat 50% 50%;*/
-
 }
 
 .book-text-left{
     text-align: left;
     width: 80%;
-    margin: 7% 8% 0 1% !important;
-    /*padding-left: 8% !important;*/
-    /*padding-right: 1% !important;*/
-    border-bottom: black solid thick;
+    /*margin: 7% 8% 0 1% !important;*/
+    padding-left: 8% !important;
+    padding-right: 1% !important;
+    /*border-bottom: black solid thick;*/
 }
 
 .book-text-right{
@@ -81,17 +80,34 @@ body{
 }
 
 .inner-page-col-r{
-    padding: 5px 5px 5px 30px !important;
+    margin: 5px 5px 5px 30px !important;
+    padding-left: 25px;
     line-height: 90%;
     border-left: black solid thick;
 }
 
-/*font Awesome styling*/
-.fas{
-    font-size: 7em;
+.userInfo-descript{
+    margin: 5px 0 5px 0;
 }
 
-.fa{
+.userInfofield{
+    -webkit-appearance: none ;
+    border-style: none ;
+    background-color: transparent;
+}
+
+/*font Awesome styling*/
+.social-media{
+    font-size: 1em;
+    margin: 0;
+    padding: 0 0 0 .75em;
+    text-decoration: inherit;
+    color: #383d41;
+    cursor: auto;
+}
+
+.userLogo{
+    color: #383d41;
     font-size: 10em;
 }
 
