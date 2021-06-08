@@ -19,27 +19,29 @@ $(document).ready(function() {
                     // apply.innerHTML += "<h4 class='select'>" + book.items[i].volumeInfo.description + "</h4>";
 
 
-                    apply.innerHTML += "<div class='col'><div class=\"container grid-body select\" id=\"cardBody\"><div class=\"card\" style=\"width: 18rem;\"><div class=\"card-body\" style=\"background-color: #7A7072\"><h5 class=\"card-title select\" style=\"text-align: center; color: white; font-size: larger; font-weight: bold\">" + book.items[i].volumeInfo.title + "</h5><img  class=\" select\" src=" + book.items[i].volumeInfo.imageLinks.thumbnail + "alt=\"pic\" style=\"width: 250px;\"></div></div></div></div>";
+                    apply.innerHTML += "<div class='col'><div class=\"container grid-body\" id=\"cardBody\"><div class=\"card\" style=\"width: 18rem;\"><div class=\"card-body select\" style=\"background-color: #7A7072\"><h5 class=\"card-title select\" style=\"text-align: center; color: white; font-size: larger; font-weight: bold\">" + book.items[i].volumeInfo.title + "</h5><img  class=\"select\" src=" + book.items[i].volumeInfo.imageLinks.thumbnail + "alt=\"pic\" style=\"height: 300px;\"></div></div></div></div>";
 
                 }
             },
             type: "GET"
         });
     }
+    let cardBody = document.getElementById("cardBody");
     let url = document.getElementById("url");
-    let title = document.getElementById("title");
+    let title = document.getElementsByClassName("card-title");
     let info = document.getElementById("info");
     var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', getBooks);
 
     $(document).on("click", "div.select" , function() {
-        let href = $(this).attr('src');
-        url.setAttribute("value", href)
-    });
-    $(document).on("click", "div.select" , function() {
+        let src = $("img.select").attr('src');
+        url.setAttribute("value", src)
         let bookName = $('h5.select').clone().html();
         title.setAttribute("value", bookName)
     });
+    // $(document).on("click", "div.select" , function() {
+    //
+    // });
     // $(document).on("click", "h4.select" , function() {
     //     let description = $('h4.select').clone().html();
     //     info.setAttribute("value", description)
