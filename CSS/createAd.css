@@ -112,6 +112,16 @@ body{
     border-radius: 0 20%;
 }
 
+.resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+    width: 80%;
+    height: auto;
+    /*margin-right: auto;*/
+    margin-left: auto;
+}
+
 .bookcover {
     position: absolute;
     top: 40px;
