@@ -14,6 +14,31 @@ body{
     text-align: center;
 }
 
+.form-button:hover {
+    background-color: #494949;
+    color: #FFFFFF;
+}
+
+.form-button:after {
+    content: "";
+    background: #908f8f;
+    display: block;
+    position: absolute;
+    padding-top: 200%;
+    padding-right: 200%;
+    margin-right: -100px!important;
+    margin-top: -60%;
+    border-radius: 10% 10%;
+    opacity: 0;
+    transition: all 0.8s;
+}
+
+.form-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
 .openbook{
     z-index: 10;
     display: flex;
@@ -110,15 +135,6 @@ body{
 .price{
     text-align: center;
     border-radius: 0 20%;
-}
-
-.resultsContainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
-    height: auto;
-    margin: 5% 10% 0 auto;
-
 }
 
 .bookcover {
@@ -352,6 +368,18 @@ height: 120px;
 }
 
 /* Card Flipping CSS */
+
+.resultsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    height: auto;
+    margin: 13% 3% 0 auto;
+    perspective: 700px;
+    row-gap: 168px;
+    column-gap: 40px;
+}
+
 .card-block .btn-outline-primary {
     width: 100%;
     border-top-left-radius: 0;
@@ -361,13 +389,50 @@ height: 120px;
     position: absolute;
 }
 
-.card {
-    margin: 40px;
+.card-title {
+    margin: 10px 0 3px 0;
+    color: lightgrey !important;
+    text-shadow: 2px 0 0 black;
+    overflow: hidden;
+    font-weight: bolder;
+    font-size: large !important;
+}
+.card-subtitle {
+    overflow: hidden;
+    font-size: medium;
+    font-family: 'Volkhov', serif;
+    color: rgba(144, 143, 143, 0.3);
 }
 
-.card-container {
-    perspective: 700px;
+.card-text:last-child {
+    margin: 3px;
+    overflow: auto;
+    font-size: medium;
+    font-family: 'Volkhov', serif;
+    color: #908f8f;
+    overflow: -moz-hidden-unscrollable;
 }
+
+p .card-text {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.card {
+    /*margin: 40px;*/
+}
+.card-body {
+    width: 250px!important;
+    height: 350px!important;
+    margin: 2px !important;
+    padding: 2px !important;
+}
+/*.card-container {*/
+/*    width: 250px;*/
+/*    height: 350px;*/
+/*    margin: 2px !important;*/
+/*    padding: 2px !important;*/
+/*}*/
 
 .form-button{
     -webkit-transition-duration: 0.4s;
@@ -375,32 +440,6 @@ height: 120px;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
-}
-
-.form-button:hover {
-    background-color: #494949;
-    color: #FFFFFF;
-}
-
-.form-button:after {
-    content: "";
-    background: #908f8f;
-    display: block;
-    position: absolute;
-    padding-top: 200%;
-    padding-right: 200%;
-    margin-right: -100px!important;
-    margin-top: -60%;
-    border-radius: 10% 10%;
-    opacity: 0;
-    transition: all 0.8s;
-}
-
-.form-button:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
 }
 
 .card-flip {
@@ -423,18 +462,32 @@ height: 120px;
 
 .card-flip .front {
     position: relative;
+    /*top: -50px;*/
     z-index: 3;
+    width: 100%;
+    height: 100%;
 }
 
 .card-flip .back {
     position: relative;
-    top: -300px;
+    top: -350px;
     z-index: 2;
     transform: rotateY(-180deg);
+    width: 100%;
+    height: 300px;
+    text-align: center;
 }
 
 .card-container:hover .card-flip {
     transform: rotateY(180deg);
+}
+
+.cardImage {
+    width: 215px;
+    height: 290px;
+    margin: 5px 0 5px 15px;
+
+
 }
 
 
