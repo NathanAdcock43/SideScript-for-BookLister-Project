@@ -19,13 +19,11 @@ $(document).ready(function() {
                     // apply.innerHTML += "<h4 class='select'>" + book.items[i].volumeInfo.description + "</h4>";
                     apply.innerHTML += "<div class=\"container grid-body\" id=\"cardBody\" style='width: max-content'><div class=\"card\" style=\"width: 18rem;\"><div class=\"card-body select\" style=\"background-color: #7A7072\"><h5 class='select card-title' style=\"text-align: center; color: white; font-size: larger; font-weight: bold\">" + book.items[i].volumeInfo.title + "</h5><img  class=\"select\" src=" + book.items[i].volumeInfo.imageLinks.thumbnail + "alt=\"pic\" style=\"width: 250px; height: 350px;\"></div></div></div>";
 
-                    // apply.innerHTML += '<div class=\"col-md-4 card-container\"><div class=\"card card-flip\"><div class=\"front card-block\"><img src=\" + book.items[i].volumeInfo.imageLinks.thumbnail + " alt=\"thecount\" style=\"width: 250px; height: 350px;\"></div><div class=\"back card-block\"><h4 class="card-title">Title</h4><h6 class=\"card-subtitle text-muted\">Sub-title</h6><p class=\"card-text\">Text</p><a href=\"#\" class=\"btn btn-primary btn-lg\">Read More</a></div></div></div>'
+                    apply.innerHTML += '<div class=\"card-container container grid-body\" id=\"cardBody\" style=\'width: max-content\'><div class=\"card card-flip card-body select\"><div class=\"front card-block\"><h5 class=\'select card-title\' style=\"text-align: center; color: white; font-size: larger; font-weight: bold\">' + book.items[i].volumeInfo.title + '</h5><img src=' + book.items[i].volumeInfo.imageLinks.thumbnail +  'alt=\"thecount\" style=\"width: 250px; height: 350px;\"></div><div class=\"back card-block\" style=\"width: 250px; height: 350px;\"><h5 class="card-title">'+ book.items[i].volumeInfo.title +'</h5><h6 class=\"card-subtitle text-muted select\">'+ book.items[i].volumeInfo.authors +'</h6><p class=\"card-text select">'+ book.items[i].volumeInfo.description +'</p></div></div></div>'
 
 
-
-
-
-
+                    // to give to
+                    // apply.innerHTML += '<div class=\"card-container container grid-body\" id=\"cardBody\" style=\'width: max-content\'><div class=\"card card-flip card-body select\"><div class=\"front card-block\"><h5 class=\'select card-title\' style=\"text-align: center; color: white; font-size: larger; font-weight: bold\">' + book.items[i].volumeInfo.title + '</h5><img src=' + book.items[i].volumeInfo.imageLinks.thumbnail +  'alt=\"thecount\" style=\"width: 250px; height: 350px;\"></div><div class=\"back card-block\" style=\"width: 250px; height: 350px;\"><h4 class="card-title">'+ book.items[i].volumeInfo.title +'</h4><h6 class=\"card-subtitle text-muted\">Condition</h6><p class=\"card-text\">User Description</p><a href=\"#\" class=\"btn btn-primary btn-lg\">User's Page</a></div></div></div>'
 
 
 
@@ -41,7 +39,10 @@ $(document).ready(function() {
     // let cardBody = document.getElementById("cardBody");
     let url = document.getElementById("url");
     let title = document.getElementById("title");
-    let info = document.getElementById("info");
+    // let info = document.getElementById("info");
+    let authors = document.getElementById("authors")
+    let titleDescription= document.getElementById("description")
+
     var submitButton = document.querySelector('#submit');
     submitButton.addEventListener('click', getBooks);
     $(document).on("click", "div.select" , function() {
@@ -57,6 +58,18 @@ $(document).ready(function() {
         let description = $('h4.select').clone().html();
         info.setAttribute("value", description)
     });
+    $(document).on("click", "p.select" , function() {
+        let description = $('h4.select').clone().html();
+        titleDescription.setAttribute("value", description)
+    });
+    $(document).on("click", "h6.select" , function() {
+        let author = $('h4.select').clone().html();
+        authors.setAttribute("value", author)
+    });
+
+
+
+
     // $(document).on("click", "h4.select" , function() {
     //
     // }
