@@ -14,6 +14,15 @@ body{
     text-align: center;
 }
 
+.form-button{
+    position: relative;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
 .form-button:hover {
     background-color: #494949;
     color: #FFFFFF;
@@ -433,14 +442,6 @@ p .card-text {
 /*    margin: 2px !important;*/
 /*    padding: 2px !important;*/
 /*}*/
-
-.form-button{
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
-}
 
 .card-flip {
     position: relative;
