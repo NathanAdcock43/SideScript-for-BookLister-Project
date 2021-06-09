@@ -49,14 +49,24 @@
         <div class="infoBanner row">
             <div class="col-3"></div>
             <div class="col-6 bannerTextBlock">
-                <div style="margin-top: 40px">
-                    <h3>Edit your book posts here</h3>
-                    <input type="text" id="search" placeholder="Book Title"
-                           style="border: 6px inset #7A7072 ; border-radius: 0 20%; font-weight: bolder; font-size: 15px;">
-                    <button class="display-title form-button" id="searchTitle" type="submit">Search</button>
+                <div class="row">
+                    <div style="margin-right: auto; margin-left: auto">
+                        <h3>Select an Ad:</h3>
+                        <div class="col">
+                            <select id="genre" class="selectpicker dropdown" aria-label="Genre"
+                                    data-style="btn-primary">
+                                <option selected>Your ads</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div style="margin-right: auto; margin-left: auto">
+                        <h3>Edit your book's Tile:</h3>
+                        <input type="text" id="search" placeholder="Book Title"
+                               style="border: 6px inset #7A7072 ; border-radius: 0 20%; font-weight: bolder; font-size: 15px;">
+                    </div>
                 </div>
-                <div style="margin-top: 40px">
-                    <h3>Filter By Genre: Select from the drop down menu</h3>
+                <div style="margin-top: 10px">
+                    <h3>Select a new Genre:</h3>
                     <div class="col">
                         <select id="genre" class="selectpicker dropdown" aria-label="Genre"
                                 data-style="btn-primary">
@@ -74,18 +84,24 @@
                         </select>
                     </div>
                 </div>
-                <div style="margin-top: 40px">
-                    <h3>Filter By Genre: Select from the drop down menu</h3>
+                <div style="margin-top: 10px">
+                    <h3>Approximate your book's condition:</h3>
                     <div class="col">
-                        <select id="genre" class="selectpicker dropdown" aria-label="condition"
+                        <select id="condition" class="selectpicker dropdown" aria-label="condition"
                                 data-style="btn-primary">
                             <option selected>What genre is it?</option>
-                            <option value="1">Mystery</option>
-                            <option value="2">Horror</option>
-                            <option value="3">Adventure</option>
+                            <option value="1">New</option>
+                            <option value="2">Slightly Used</option>
+                            <option value="3">Well Worn</option>
                         </select>
                     </div>
                 </div>
+                <div style="margin: 10px 0 0 10px">
+                    <h3>Tell us about your reading experience with this book:</h3>
+                    <textarea class="form-control form-field" id="description" rows="3"
+                              placeholder="Tell us about the book you are selling" style="height: auto"></textarea>
+                </div>
+
             </div>
             <div class="col-2"></div>
         </div>
@@ -211,8 +227,6 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="../js/keys.js"></script>
 <script src="../js/books.js"></script>
-
-
 
 
 </body>
