@@ -18,6 +18,21 @@ $(document).ready(function() {
                     // apply.innerHTML += "<img class='select' src='" + book.items[i].volumeInfo.imageLinks.thumbnail + "'>";
                     // apply.innerHTML += "<h4 class='select'>" + book.items[i].volumeInfo.description + "</h4>";
                     apply.innerHTML += "<div class=\"container grid-body\" id=\"cardBody\" style='width: max-content'><div class=\"card\" style=\"width: 18rem;\"><div class=\"card-body select\" style=\"background-color: #7A7072\"><h5 class='select card-title' style=\"text-align: center; color: white; font-size: larger; font-weight: bold\">" + book.items[i].volumeInfo.title + "</h5><img  class=\"select\" src=" + book.items[i].volumeInfo.imageLinks.thumbnail + "alt=\"pic\" style=\"width: 250px; height: 350px;\"></div></div></div>";
+
+                    // apply.innerHTML += '<div class=\"col-md-4 card-container\"><div class=\"card card-flip\"><div class=\"front card-block\"><img src=\" + book.items[i].volumeInfo.imageLinks.thumbnail + " alt=\"thecount\" style=\"width: 250px; height: 350px;\"></div><div class=\"back card-block\"><h4 class="card-title">Title</h4><h6 class=\"card-subtitle text-muted\">Sub-title</h6><p class=\"card-text\">Text</p><a href=\"#\" class=\"btn btn-primary btn-lg\">Read More</a></div></div></div>'
+
+
+
+
+
+
+
+
+
+
+
+
+
                 }
             },
             type: "GET"

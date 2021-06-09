@@ -121,59 +121,71 @@ body{
 
 }
 
-/*.bookcover {*/
-/*    position: absolute;*/
-/*    top: 1000px;*/
-/*    right: -68px;*/
-/*    height: 700px;*/
-/*    width: 1500px ;*/
-/*    z-index: -10;*/
-/*    transform: scale(1, 1.75);*/
-/*}*/
-
-.first {
-    position: relative;
-    transform: /*translate(0px,0px);*/ scale(1, 1.75);
-    top: 0px;
-    right: 100px;
+.bookcover {
+    position: absolute;
+    top: 1000px;
+    right: -68px;
     height: 700px;
     width: 1500px ;
     z-index: -10;
+    transform: scale(1, 1.75);
+}
 
+.first {
+    position: absolute;
+    transform: /*translate(0px,0px);*/ scale(1.15, 1.225);
+    top: 800px;
+    right: 32px;
+    height: 500px;
+    width: 1500px ;
+    z-index: -10;
 }
 
 
 
 .second {
     position: absolute;
-    top: 0px;
-    right: -68px;
-    height: 700px;
+    top: 1310px;
+    right: 75px;
+    height: 500px;
     width: 1500px ;
-    z-index: -10;
-    transform: /*translate(800px,-570px);*/ scale(1, 1.75);
+    z-index: -11;
+    transform: /*translate(800px,-570px);*/ scale(1.15, 1.225);
 }
+
+
 
 .third {
     position: absolute;
-    top: 0px;
-    right: -68px;
-    height: 700px;
-    width: 1500px ;
-    z-index: -10;
-    transform: /*translate(800px,-840px);*/ scale(1, 1.75);
+    top: 1830px;
+    right: 80px;
+    height: 500px;
+    width: 1500px;
+    z-index: -12;
+    transform: /*translate(800px,-840px);*/ scale(1.15, 1.225);
 }
+
 
 .forth {
     position: absolute;
-    top: 0px;
-    right: -68px;
-    height: 700px;
+    top: 2355px;
+    right: 72px;
+    height: 500px;
     width: 1500px;
-    z-index: -10;
-    transform: /*translate(800px,-1100px);*/ scale(1, 1.75);
+    z-index: -13;
+    transform: /*translate(800px,-1100px);*/ scale(1.15, 1.225);
 }
 
+.fifth {
+    position: absolute;
+    top: 2850px;
+    right: 32px;
+    height: 500px;
+    width: 1500px;
+    z-index: -13;
+    transform: /*translate(800px,-1100px);*/ scale(1.15, 1.225);
+
+}
 
 .bookspace{
     margin: 20px 0 0 0 !important;
@@ -339,8 +351,6 @@ height: 120px;
     color: #495057;
 }
 
-
-
 /* Card Flipping CSS */
 .card-block .btn-outline-primary {
     width: 100%;
@@ -498,3 +508,289 @@ footer .form-control {
     padding: 0.7em 1em;
 }
 
+/*Media querries*/
+@media screen and (max-width: 1699px) {
+    .first {
+        transform: scale(.7, 1.225);
+        right: -100px;
+    }
+
+    .second {
+        transform: scale(.7, 1.225);
+        right: -100px;
+    }
+
+    .third {
+        transform: scale(.7, 1.225);
+        right: -100px;
+
+    }
+
+    .forth {
+        transform: scale(.7, 1.225);
+        right: -100px;
+    }
+
+
+    .fifth {
+        transform: scale(.7, 1.225);
+        right: -100px;
+    }
+    #bookmark {
+        /*width: px;*/
+        display: block;
+        height: 380px;
+        background-color: transparent;
+        position: absolute;
+        top: -100px;
+        /*left: 10px;*/
+        border: solid 100px  #B13A22;
+        border-bottom: solid 50px transparent;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        transition: all 0.2s;
+        animation: mover 4s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: bookmarkDrop;
+    }
+    #bookmark:after {
+        content: "";
+        position: relative;
+        right: 65px;
+        top: -20px;
+
+        border: 130px solid #b13a22;
+        width: 100px;
+        height: 120px;
+
+    }
+
+    .register-left .book{
+        position: absolute;
+        top: -240px;
+        left: 125px;
+        z-index: 10;
+        margin-top: 15%;
+        margin-bottom: 5%;
+        width: 150%;
+        animation: mover 5s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: mover;
+    }
+
+    .revealedLinks{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        letter-spacing: 2px;
+        font-size: 35px;
+        text-align: left;
+        padding-left: 60px;
+        font-weight: bolder;
+        color: #FFFFFF;
+        top: 25px;
+        right: 130px;
+        z-index: 15;
+        animation: mover 4s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: reveal;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+@media screen and (max-width: 1994px) and (min-width: 1700px) {
+    .first {
+        top: 750px;
+        transform: scale(.8, 1.225);
+    }
+
+    .second {
+        top: 1260px;
+        transform: scale(.8, 1.225);
+    }
+
+    .third {
+        top: 1780px;
+        transform: scale(.8, 1.225);
+
+    }
+
+    .forth {
+        top: 2305px;
+        transform: scale(.8, 1.225);
+    }
+
+
+    .fifth {
+        top: 2800px;
+        transform: scale(.8, 1.225);
+    }
+
+    #bookmark {
+        display: block;
+        height: 380px;
+        width: 150px;
+        background-color: transparent;
+        position: absolute;
+        top: -100px;
+        left: -30px;
+        border: solid 150px #B13A22;
+        border-bottom: solid 50px transparent;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        transition: all 0.2s;
+        animation: mover 4s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: bookmarkDrop;
+    }
+    #bookmark:after {
+        content: "";
+        position: relative;
+        right: 65px;
+        top: -45px;
+
+        border: 110px solid #b13a22;
+        width: 100px;
+        height: 120px;
+
+    }
+
+    .register-left .book{
+        position: absolute;
+        top: -250px;
+        left: 100px;
+        z-index: 10;
+        margin-top: 15%;
+        margin-bottom: 5%;
+        width: 175%;
+        animation: mover 5s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: mover;
+    }
+
+    .revealedLinks{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        letter-spacing: 2px;
+        font-size: 35px;
+        text-align: left;
+        padding-left: 10px;
+        font-weight: bolder;
+        color: #FFFFFF;
+        top: 25px;
+        right: 110px;
+        z-index: 15;
+        animation: mover 4s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: reveal;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+
+
+@media screen and (min-width: 2219px) {
+    .first {
+        transform: scale(1.4, 1.225);
+        right: 150px;
+    }
+
+    .second {
+        transform: scale(1.4, 1.225);
+        right: 150px;
+    }
+
+    .third {
+        transform: scale(1.4, 1.225);
+        right: 150px;
+
+    }
+
+    .forth {
+        transform: scale(1.4, 1.225);
+        right: 150px;
+    }
+
+
+    .fifth {
+        transform: scale(1.4, 1.225);
+        right: 150px;
+    }
+
+    .register-left .book{
+        position: absolute;
+        top: -250px;
+        left: 100px;
+        z-index: 10;
+        margin-top: 15%;
+        margin-bottom: 5%;
+        width: 175%;
+        animation: mover 5s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: mover;
+    }
+
+    #bookmark {
+        /*width: px;*/
+        display: block;
+        height: 380px;
+        background-color: transparent;
+        position: absolute;
+        top: -100px;
+        /*right: 200px;*/
+        /*border: solid 250px  #B13A22;*/
+        border-bottom: solid 50px transparent;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        transition: all 0.2s;
+        animation: mover 4s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: bookmarkDrop;
+    }
+    #bookmark:after {
+        content: "";
+        position: relative;
+        right: 20px;
+        top: -50px;
+        /*    height: 200px;*/
+        /*border: 90px solid #b13a22;*/
+        /*    border-bottom: solid 120px transparent;*/
+        /*    border-top-left-radius: 75px;*/
+        /*    border-top-right-radius: 75px;*/
+        width: 100px;
+        height: 120px;
+
+    .revealedLinks{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        letter-spacing: 2px;
+        font-size: 40px;
+        text-align: left;
+        padding-left: 60px;
+        font-weight: bolder;
+        color: #FFFFFF;
+        top: 25px;
+        right: 150px;
+        z-index: 15;
+        animation: mover 4s forwards ;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        animation-name: reveal;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+    }
+}
